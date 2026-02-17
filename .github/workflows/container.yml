@@ -9,7 +9,7 @@ jobs:
   container-test-job:
     runs-on: arc-runner-set
     container:
-      image: chainguard/node:latest-dev
+      image: chainguard/wolfi-base
       env:
         NODE_ENV: development
       # ports:
