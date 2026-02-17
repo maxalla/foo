@@ -19,11 +19,12 @@ jobs:
       # options: --cpus 1
     steps:
       - name: Install git
-        run: apk add git
+        run: apk add git nodejs20
       - name: Checkout source code
         uses: actions/checkout@v4         
       - name: check home
         run: |
+          id
           pwd
           ls -la
       
