@@ -21,5 +21,9 @@ jobs:
       - name: Check for dockerenv file
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
       - name: check home
-        run: ls -la /github/home
+        run: |
+          ls -la /github/home
+          pwd
+          ls -la
+          find / -name readme.md
       
