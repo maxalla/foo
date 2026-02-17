@@ -18,6 +18,8 @@ jobs:
       #   - my_docker_volume:/volume_mount
       # options: --cpus 1
     steps:
+      - name: Install git
+        run: apk add git
       - name: Checkout source code
         uses: actions/checkout@v4         
       - name: check home
