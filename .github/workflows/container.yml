@@ -9,7 +9,8 @@ jobs:
   container-test-job:
     runs-on: arc-runner-set
     container:
-      image: chainguard/wolfi-base
+      image: chainguard/node:latest-dev
+      options: --user 1001 
       env:
         NODE_ENV: development
       # ports:
@@ -18,8 +19,8 @@ jobs:
       #   - my_docker_volume:/volume_mount
       # options: --cpus 1
     steps:
-      - name: Install git
-        run: apk add git nodejs-20
+      # - name: Install git
+      #   run: apk add git nodejs-20
       - name: Checkout source code
         uses: actions/checkout@v4         
       - name: check home
