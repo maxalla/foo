@@ -25,5 +25,5 @@ jobs:
           ls -la /github/home
           pwd
           ls -la
-          find / -name readme.md
+          find / -name README.md
       
