@@ -20,3 +20,6 @@ jobs:
     steps:
       - name: Check for dockerenv file
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+      - name: check home
+        run: ls -l /github/home
+      
