@@ -24,9 +24,18 @@ jobs:
         run: |
           id
           pwd
+          echo "==== __w ===="
           ls -la /__w
+          echo "==== __w/_* ===="
           ls -la /__w/_*
+          echo "==== __wtemprunner ===="
+          ls -la /__w/_temp/_runner_file_commands
+          echo '==== __w temp *.sh ===='
+          ls -l /__w/_temp/*.sh
+          echo '==== __w loop ===='
           for n in /__w/_temp/*.sh ; do echo $n ; cat $n ; echo "====" ; done
+          echo '==== ps ===='
+          ps -ef
       # - name: Checkout source code
       #   uses: actions/checkout@v6        
       # - name: check home
