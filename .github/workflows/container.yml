@@ -11,8 +11,8 @@ jobs:
     container:
       image: chainguard/node:latest-dev
       options: --user 1001 
-      env:
-        NODE_ENV: development
+      # env:
+      #   NODE_ENV: development
       # ports:
       #   - 80
       # volumes:
@@ -22,7 +22,7 @@ jobs:
       # - name: Install git
       #   run: apk add git nodejs-20
       - name: Checkout source code
-        uses: actions/checkout@v4         
+        uses: actions/checkout@v6        
       - name: check home
         run: |
           id
