@@ -10,7 +10,7 @@ jobs:
     runs-on: arc-runner-set
     container:
       # image: chainguard/node:latest-dev
-      image: alpine
+      image: node:slim
       options: --user 0 
       # env:
       #   NODE_ENV: development
