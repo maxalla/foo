@@ -9,7 +9,8 @@ jobs:
   container-test-job:
     runs-on: arc-runner-set
     container:
-      image: chainguard/node:latest-dev
+      # image: chainguard/node:latest-dev
+      image: alpine
       options: --user 0 
       # env:
       #   NODE_ENV: development
