@@ -7,7 +7,7 @@ jobs:
   container-test-job:
     runs-on: arc-runner-set
     container:
-      image: ttl.sh/sleeper
+      image: chainguard/wolfi-base
       # options: --user 0 
       # env:
       #   NODE_ENV: development
