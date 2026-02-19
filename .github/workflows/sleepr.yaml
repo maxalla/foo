@@ -1,4 +1,4 @@
-name: RunContainer
+name: Sleeper
 on:
   workflow_dispatch:
   push:
@@ -7,7 +7,7 @@ jobs:
   container-test-job:
     runs-on: arc-runner-set
     container:
-      image: sleeper
+      image: ttl.sh/sleeper
       # options: --user 0 
       # env:
       #   NODE_ENV: development
