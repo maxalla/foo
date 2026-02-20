@@ -8,4 +8,4 @@ jobs:
     - run: echo "🎉 This job uses runner scale set runners!"
     - run: id
     - run: hostname
-    - run: sleep 3600
+    - run: sleep 10
