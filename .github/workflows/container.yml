@@ -34,8 +34,8 @@ jobs:
           ls -l /__w/_temp/*.sh
           echo '==== __w loop ===='
           for n in /__w/_temp/*.sh ; do echo $n ; cat $n ; echo "====" ; done
-          echo '==== ps ===='
-          ps -ef
+          # echo '==== ps ===='
+          # ps -ef
       # - name: Checkout source code
       #   uses: actions/checkout@v6        
       # - name: check home
