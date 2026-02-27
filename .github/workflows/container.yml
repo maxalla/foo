@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 jobs:
   container-test-job:
-    runs-on: arc-runner-set
+    runs-on: runner
     container:
       # image: chainguard/node:latest-dev
       image: node:slim
