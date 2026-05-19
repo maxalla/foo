@@ -1,0 +1,14 @@
+name: selfhasher
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+jobs:
+  container-test-job:
+    runs-on: runner
+    steps:
+      - uses: actions/checkout@v6
+      - name: File check
+        run: |
+          ls -la
+          sha1sum README.md
