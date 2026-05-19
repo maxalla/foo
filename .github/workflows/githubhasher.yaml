@@ -17,4 +17,5 @@ jobs:
           which node
           ls -la /usr/local/bin/node
           ls -la /usr/local/bin/node*
+          find / -name node 
           echo ${{ hashFiles('README.md') }}
