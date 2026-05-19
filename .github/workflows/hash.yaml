@@ -1,4 +1,4 @@
-name: RunContainer
+name: hasher
 on:
   workflow_dispatch:
   push:
@@ -7,14 +7,14 @@ jobs:
   container-test-job:
     runs-on: runner
     steps:
-      - uses: actions/cache@v4
-        with:
-          path: ~/.cache
-          key: ${{ hashFiles('README.md') }}
-          restore-keys: |
-            ${{ hashFiles('README.md') }}
+      # - uses: actions/cache@v4
+      #   with:
+      #     path: ~/.cache
+      #     key: ${{ hashFiles('README.md') }}
+      #     restore-keys: |
+      #       ${{ hashFiles('README.md') }}
 
       - name: Install dependencies
         run: |
-          ls -l ~/.cache
-          cp README.md ~/.cache
+          ls -l 
+          echo ${{ hashFiles('README.md') }}
