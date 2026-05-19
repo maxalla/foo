@@ -1,0 +1,20 @@
+name: RunContainer
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+jobs:
+  container-test-job:
+    runs-on: runner
+    steps:
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache
+          key: ${{ hashFiles('README.md') }}
+          restore-keys: |
+            ${{ hashFiles('README.md') }}
+
+      - name: Install dependencies
+        run: |
+          ls -l ~/.cache
+          cp README.md ~/.cache
