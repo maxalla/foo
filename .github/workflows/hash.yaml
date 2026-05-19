@@ -13,8 +13,9 @@ jobs:
       #     key: ${{ hashFiles('README.md') }}
       #     restore-keys: |
       #       ${{ hashFiles('README.md') }}
-
-      - name: Install dependencies
+      - uses: actions/checkout@v6
+      
+      - name: File check
         run: |
-          ls -l 
+          ls -la
           echo ${{ hashFiles('README.md') }}
