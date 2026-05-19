@@ -15,5 +15,6 @@ jobs:
         run: |
           node --version
           which node
-          ls -la
+          ls -la /usr/local/bin/node
+          ls -la /usr/local/bin/node*
           echo ${{ hashFiles('README.md') }}
